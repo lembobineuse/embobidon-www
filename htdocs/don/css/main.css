@@ -58,9 +58,27 @@ strong {
 }
 
 /**
- * ========== Bootstrap overrides ==========
+ * Bootstrap pager override
  **/
 .pager li > a,
 .pager li > span {
     border-radius: 6px;
+}
+
+/**
+ * ========== EDITOS ==========
+ **/
+
+.edito .author {
+    text-align: right;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/**
+ * TOC Bootstrap panel override
+ **/
+.panel-default > .panel-heading,
+a.list-group-item {
+    color: #ccc;
 }
