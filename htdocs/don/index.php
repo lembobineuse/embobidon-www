@@ -26,8 +26,8 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	
-<nav class="navbar navbar-default navbar-static-top">
+
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -100,13 +100,135 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
     </div>
 </nav>
 
-<main>
+<header class="container">
 
-<section id="<?php echo $current_route ?>" class="container">
-<?php require_once $current_page ?>
-</section>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/logo_big.png" alt="" class="img-responsive center-block"/>
+            </div>
+            <div class="col-md-6">
+                <div class="slogan-container">
+                    <img src="img/slogan.png" class="img-responsive center-block"
+                        alt="L'Embobineuse, pilier de la patate, sollicite un don pour ne pas perdre la frite !"/>
+                    <div class="donate-callout">
+                        <a class="btn btn-primary btn-lg" href="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don" target="_blank">
+                            Faire un don !
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<main class="container">
+
+    <section id="<?php echo $current_route ?>">
+    <?php require_once $current_page ?>
+    </section>
 
 </main>
+
+<footer class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-4 col-md-push-4">
+            <p>
+                L'Embobineuse a besoin de TOI ! Alors...
+            </p>
+            <p>
+                <a href="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don" target="_blank"
+                    class="btn btn-primary" style="width: 100%">
+                    Fais un don !
+                </a>
+            </p>
+            <p>
+                Et fais tourner le message:
+            </p>
+            <p class="btn-group btn-group-justified">
+                <a class="btn btn-social btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://lembobineuse.biz/don" target="_blank">
+                    Facebook
+                </a>
+                <a class="btn btn-social btn-twitter" href="https://twitter.com/home?status=L'Embobineuse,%20pilier%20de%20la%20patate,%20sollicite%20vos%20dons%20pour%20ne%20pas%20perdre%20la%20frite%20!%0Ahttp://lembobineuse.biz/don" target="_blank">
+                    Twitter
+                </a>
+                <a class="btn btn-social btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://lembobineuse.biz/don&title=L'Embobineuse,%20pilier%20de%20la%20patate,%20sollicite%20vos%20dons%20pour%20ne%20pas%20perdre%20la%20frite%20!" target="_blank">
+                    LinkedIn
+                </a>
+                <a class="btn btn-social btn-google-plus" href="https://plus.google.com/share?url=http://lembobineuse.biz/don" target="_blank">
+                    Google +
+                </a>
+            </p>
+            <p>
+                Conformément à la loi du 1er août 2003 relative au mécénat culturel,
+                les dons adressés à L'Embobineuse ouvrent droit à une réduction d’impôt
+                égale à 66% du montant du don,
+                dans la limite annuelle de 20 % du revenu imposable.
+                <a href="http://vosdroits.service-public.fr/particuliers/F426.xhtml" target="_blank">
+                    Plus d'information ici
+                </a>.
+            </p>
+        </div>
+
+        <div class="col-md-4 col-md-push-4">
+            Plan:
+            <ul>
+                <li>
+                    <a href="?p=01-aguicheur">La Pelle à Dons</a>
+                </li>
+                <li>
+                    Histoire de la Bobine
+                    <ol>
+                        <li>
+                            <a href="?p=02-bateau-cool">Embobineuse, le bateau cool</a>
+                        </li>
+                        <li>
+                            <a href="?p=03-errorism">Droit à l'erreur & remises en question</a>
+                        </li>
+                        <li>
+                            <a href="?p=04-naufrage">Économie d'un naufrage</a>
+                        </li>
+                        <li>
+                            <a href="?p=05-conclusion">Que l'odyssée suive son cours !</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="?p=06-editos">10 Ans d'Editos</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-4 col-md-pull-8">
+
+            <div class="row">
+                <div class="col-md-6 hidden-sm hidden-xs">
+                    <img src="img/logo_big.png" alt="" class="img-responsive center-block"/>
+                </div>
+                <div class="col-md-6">
+                    <address>
+                        <p>
+                            <b>L'Embobineuse</b><br>
+                            11 Bd Boués<br/>
+                            13001 Marseille<br/>
+                            FRANCE
+                        </p>
+                        <p>
+                            Tel: <a href="tel:+33-4-91-50-66-09">+33 4 91 50 66 09</a><br/>
+                            Mail: <a href="mailto:info@lembobineuse.biz">info@lembobineuse.biz</a><br/>
+                            <a href="http://lembobineuse.biz">www.lembobineuse.biz</a><br/>
+                        </p>
+                    </address>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
