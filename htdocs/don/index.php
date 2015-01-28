@@ -114,31 +114,12 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <!-- jQuery.fancybox -->
-<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script type="text/javascript" src="js/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-<script type="text/javascript" src="js/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-<script type="text/javascript" src="js/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="js/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script src="js/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script src="js/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
-<script type="text/javascript">
-$(document).ready(function()
-{
-    $(".fancybox").fancybox();
-    $(".fancy_vimeo").click(function() {
-        $.fancybox({
-            padding: 0,
-            autoScale: false,
-            transitionIn: 'none',
-            transitionOut: 'none',
-            title: this.title,
-            width: 800,
-            height: 500,
-            href: 'http://player.vimeo.com/video/'+this.getAttribute("data-video-id")+"?autoplay=1",
-            type: 'iframe'
-        });
-        return false;
-    });
-});
-</script>
-						
+<script src="js/main.js"></script>
+
 </body>
 </html>
