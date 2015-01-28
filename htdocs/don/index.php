@@ -38,7 +38,7 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        Historique <span class="caret"></span>
+                        Histoire de la Bobine (1944 - 2026) <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
@@ -62,6 +62,9 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li>
+                    <a href="?p=06-editos">10 Ans d'Editos</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -92,10 +95,6 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
 <main>
 
 <section id="<?php echo $current_route ?>" class="container">
-
-    <!--
-    <iframe src="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/formulaire-don" width="800" height="800" /> 
-    -->
 <?php require_once $current_page ?>
 </section>
 
