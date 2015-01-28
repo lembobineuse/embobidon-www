@@ -56,3 +56,11 @@ strong {
 .jumbotron .donate-callout {
     margin: 2em 0 0 0;
 }
+
+/**
+ * ========== Bootstrap overrides ==========
+ **/
+.pager li > a,
+.pager li > span {
+    border-radius: 6px;
+}
