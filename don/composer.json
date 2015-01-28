@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-0": {
+            "Embo": "src"
+        }
+    },
+
+    "require": {
+        "pimple/pimple": "~3.0"
+    }
+}
