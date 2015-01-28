@@ -15,6 +15,11 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
     -->
     <link rel="stylesheet" href="http://bootswatch.com/cyborg/bootstrap.min.css">
 
+    <!-- jQuery.fancybox -->
+    <link rel="stylesheet" href="js/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="js/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="js/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -103,11 +108,7 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
 
-
-<link rel="stylesheet" href="js/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-<link rel="stylesheet" href="js/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-<link rel="stylesheet" href="js/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-
+<!-- jQuery.fancybox -->
 <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript" src="js/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 <script type="text/javascript" src="js/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
