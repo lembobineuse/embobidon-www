@@ -81,6 +81,9 @@ strong {
 /**
  * Buttons
  **/
+.btn-donate {
+    font-weight: bold;
+}
 .btn-social {
     color: #fff;
     font-weight: bold;

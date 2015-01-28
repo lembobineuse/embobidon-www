@@ -112,7 +112,8 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
                     <img src="img/slogan.png" class="img-responsive center-block"
                         alt="L'Embobineuse, pilier de la patate, sollicite un don pour ne pas perdre la frite !"/>
                     <div class="donate-callout">
-                        <a class="btn btn-primary btn-lg" href="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don" target="_blank">
+                        <a class="btn btn-primary btn-lg btn-donate"
+                            href="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don" target="_blank">
                             Faire un don !
                         </a>
                     </div>
@@ -137,11 +138,11 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
 
         <div class="col-md-4 col-md-push-4">
             <p>
-                L'Embobineuse a besoin de TOI ! Alors...
+                L'EMBOBINEUSE A BESOIN DE TOI !
             </p>
             <p>
                 <a href="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don" target="_blank"
-                    class="btn btn-primary" style="width: 100%">
+                    class="btn btn-primary btn-donate" style="width: 100%">
                     Fais un don !
                 </a>
             </p>
