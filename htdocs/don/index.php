@@ -9,9 +9,12 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
 	<meta charset="UTF-8">
 	<title>Appel à dons | L'Embobineuse</title>
 
-    <link rel="stylesheet" href="bootstrap-3.3.1/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- Optional theme -->
     <!--
-    <link rel="stylesheet" href="bootstrap-3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     -->
     <link rel="stylesheet" href="http://bootswatch.com/cyborg/bootstrap.min.css">
 
@@ -105,8 +108,10 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
 
 </main>
 
+<!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="bootstrap-3.3.1/js/bootstrap.min.js"></script>
+<!-- Bootstraop Javascript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <!-- jQuery.fancybox -->
 <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
