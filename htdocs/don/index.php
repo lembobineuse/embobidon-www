@@ -247,7 +247,17 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
 <script src="js/vendor/fancybox-2.1.5/source/jquery.fancybox.pack.js"></script>
 <script src="js/vendor/fancybox-2.1.5/source/helpers/jquery.fancybox-media.js"></script>
 
+<!-- MAIN -->
 <script src="js/main.js"></script>
+
+
+<!-- Analytics -->
+<script src="http://www.google-analytics.com/urchin.js"></script>
+<script>
+_uacct = "UA-180957-6";
+urchinTracker();
+</script>
+
 
 </body>
 </html>
