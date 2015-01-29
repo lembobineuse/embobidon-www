@@ -7,7 +7,10 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
 <html lang="<?php echo $LANG ?>">
 <head>
 	<meta charset="UTF-8">
-	<title>Appel à dons | L'Embobineuse</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Appel à dons | L'Embobineuse</title>
 
     <!-- Bootstrap CSS -->
     <!-- Latest compiled and minified CSS -->
