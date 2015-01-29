@@ -177,7 +177,7 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
         </div>
 
         <div class="col-md-4 col-md-push-4">
-            Plan:
+            Plan de sauvetage:
             <ul>
                 <li>
                     <a href="?p=01-aguicheur">La Pelle à Dons</a>
