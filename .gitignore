@@ -1,0 +1,7 @@
+# composer
+/don/composer.lock
+
+# backup files
+*~
+*.swp
+*.bak
