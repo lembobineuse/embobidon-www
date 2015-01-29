@@ -100,7 +100,7 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
     </div>
 </nav>
 
-<header class="container">
+<header class="container" id="header">
 
     <div class="jumbotron">
         <div class="row">
@@ -132,13 +132,13 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
 
 </main>
 
-<footer class="container-fluid">
+<footer class="container-fluid" id="footer">
 
     <div class="row">
 
         <div class="col-md-4 col-md-push-4">
             <p>
-                L'EMBOBINEUSE A BESOIN DE TOI !
+                <strong>L'EMBOBINEUSE A BESOIN DE TOI !</strong>
             </p>
             <p>
                 <a href="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don" target="_blank"
@@ -147,7 +147,7 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
                 </a>
             </p>
             <p>
-                Et fais tourner le message:
+                <strong>Et fais tourner le message:</strong>
             </p>
             <p class="btn-group btn-group-justified">
                 <a class="btn btn-social btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://lembobineuse.biz/don" target="_blank">
@@ -164,6 +164,7 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
                 </a>
             </p>
             <p>
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
                 Conformément à la loi du 1er août 2003 relative au mécénat culturel,
                 les dons adressés à L'Embobineuse ouvrent droit à une réduction d’impôt
                 égale à 66% du montant du don,
@@ -218,8 +219,13 @@ require_once __DIR__.'/../../don/src/bootstrap.php';
                             FRANCE
                         </p>
                         <p>
-                            Tel: <a href="tel:+33-4-91-50-66-09">+33 4 91 50 66 09</a><br/>
-                            Mail: <a href="mailto:info@lembobineuse.biz">info@lembobineuse.biz</a><br/>
+                            <span class="glyphicon glyphicon-phone" aria-hidden="true" aria-label="Phone"></span>
+                            <a href="tel:+33-4-91-50-66-09">+33 4 91 50 66 09</a>
+                            <br/>
+                            <span class="glyphicon glyphicon-envelope" aria-hidden="true" aria-label="Email"></span>
+                            <a href="mailto:info@lembobineuse.biz">info@lembobineuse.biz</a>
+                            <br/>
+                            <span class="glyphicon glyphicon-home" aria-hidden="true" aria-label="Website"></span>
                             <a href="http://lembobineuse.biz">www.lembobineuse.biz</a><br/>
                         </p>
                     </address>
