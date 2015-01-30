@@ -1,0 +1,7 @@
+{% macro fancythumbs(images) %}
+{% for img in images %}
+    <a class="fancybox" rel="group" href="{{ asset('img/pics/'~img~'.jpg') }}">
+        <img src="{{ asset('img/pics/'~img~'_tn.jpg') }}" />
+    </a>
+{% endfor %}
+{% endmacro %}

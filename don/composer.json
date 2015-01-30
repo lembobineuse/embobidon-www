@@ -1,11 +1,16 @@
 {
     "autoload": {
         "psr-0": {
-            "Embo": "src"
+            "Embobidon": "src"
         }
     },
 
     "require": {
-        "pimple/pimple": "~3.0"
+        "silex/silex": "~1.2",
+        "twig/twig": "~1.18",
+        "symfony/translation": "~2.6",
+        "monolog/monolog": "~1.12",
+        "symfony/monolog-bridge": "~2.6",
+        "silex/web-profiler": "~1.0"
     }
 }

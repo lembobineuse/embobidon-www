@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<section id="{{ page }}">
+
+    {% include [
+        'static/'~app.locale~'/'~page~'.html.twig',
+        'static/fr/'~page~'.html.twig'
+    ] %}
+
+</section>
+
+{% endblock %}

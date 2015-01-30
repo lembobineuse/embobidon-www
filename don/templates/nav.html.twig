@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+       <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ page('lapelle') }}">
+                L'Embobineuse, la pelle à dons
+            </a>
+        </div> 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Histoire de la Bobine (1944 - 2026) <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{ page('bateau-cool') }}">
+                                I. Embobineuse, le bateau cool
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ page('errorism') }}">
+                                II. Droit à l'erreur & remises en question
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ page('naufrage') }}">
+                                III. Économie d'un naufrage
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ page('odysseus') }}">
+                                IV. Que l'odyssée suive son cours !
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{ page('editos') }}">10 Ans d'Editos</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="{{ app.path('page', {_locale: 'fr', page: 'lapelle'}) }}">
+                        <span class="lang-sm" lang="fr"></span>
+                        <span class="sr-only">Français / French</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ app.path('page', {_locale: 'en', page: 'lapelle'}) }}">
+                        <span class="lang-sm" lang="en"></span>
+                        <span class="sr-only">English</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ app.path('page', {_locale: 'ja', page: 'lapelle'}) }}">
+                        <span class="lang-sm" lang="ja"></span>
+                        <span class="sr-only">日本語 / Japanese</span>
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

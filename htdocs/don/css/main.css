@@ -1,3 +1,6 @@
+html, body {
+    height: 100%;
+}
 body {
     font-size: 18px;
     color: #ccc;
@@ -38,6 +41,10 @@ body {
 
 #header .slogan-container {
     padding-top: 1.5em;
+}
+
+#header .campaign-stats {
+    margin-top: 1em;
 }
 
 /* ==================== FOOTER =================== */
