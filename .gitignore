@@ -2,7 +2,7 @@
 /don/composer.lock
 /don/vendor
 /don/cache/*
-/don/log/*
+/don/logs/*
 
 # backup files
 *~
