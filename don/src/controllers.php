@@ -14,15 +14,15 @@ $app
             'page' => $page
         ]);
 
-        $response = new Response();
-
-        $response->setContent($body)
-            ->setStatusCode(200)
-            ->setPublic()
-            ->setSharedMaxAge($app['cache_lifetime'])
-            ->setMaxAge($app['cache_lifetime'])
-            ->setETag(md5($body))
-        ;
+        $response = new Response($body);
+        $response->setCache([
+            'etag'          => md5($body),
+            'last_modified' => new \DateTime(),
+            'max_age'       => $app['cache_lifetime'],
+            's_maxage'      => $app['cache_lifetime'],
+            'private'       => false,
+            'public'        => true,
+        ]);
 
         return $response;
     })
