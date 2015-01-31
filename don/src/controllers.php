@@ -4,6 +4,7 @@ use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Monolog\Logger;
 
 
 $app
@@ -41,6 +42,11 @@ $app
         try {
             $stats = $service->fetchStats();
         } catch (\Exception $e) {
+            $app->log(
+                $e->getMessage(),
+                ['request_url' => '/campaign_stats'],
+                Logger::ERROR
+            );
             return $app->json([
                 'message' => $e->getMessage(),
                 'status' => 500
