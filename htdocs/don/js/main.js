@@ -16,7 +16,7 @@ $(function()
         function (data) {
             console.log(data);
             $('.campaign-amount').html(data.amount);
-            $('.campaign-donators').html(data.number);
+            $('.campaign-contributors').html(data.contributors);
         }
     );
 });

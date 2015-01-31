@@ -1,3 +1,14 @@
+{% macro timeleft() %}
+    {% set time = app['campaign_stats'].getTimeLeft() %}
+    {% if time['days'] > 0 %}
+        <strong>{{ time['days'] }}</strong>
+        jours restants
+    {% else%}
+        <strong>{{ time['hours'] }}</strong>
+        heures restantes
+    {% endif %}
+{% endmacro %}
+
 {% macro fancythumbs(images) %}
 {% for img in images %}
     <a class="fancybox" rel="group" href="{{ asset('img/pics/'~img~'.jpg') }}">
