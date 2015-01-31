@@ -39,7 +39,12 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
     <script>
-        var LOCALE = '{{ app.locale }}';
+        var Embobidon = {
+            locale: '{{ app.locale }}',
+            api: {
+                stats: '{{ path("stats") }}'
+            }
+        };
     </script>
 </head>
 <body>
