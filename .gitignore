@@ -1,6 +1,8 @@
 # composer
 /don/composer.lock
 /don/vendor
+/don/cache
+/don/log
 
 # backup files
 *~

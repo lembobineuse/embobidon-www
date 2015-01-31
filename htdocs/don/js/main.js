@@ -1,7 +1,8 @@
 (function (window, $) {
 "use strict";
 
-// DOMContentLoaded handler
+var Embobidon = window.Embobidon;
+
 $(function()
 {
     $('.fancybox').fancybox({
@@ -10,6 +11,14 @@ $(function()
             media : {}
         }
     });
+    $.getJSON(
+        Embobidon.api.stats,
+        function (data) {
+            console.log(data);
+            $('.campaign-amount').html(data.amount);
+            $('.campaign-contributors').html(data.contributors);
+        }
+    );
 });
 
 }(this, this.jQuery));

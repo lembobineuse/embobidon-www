@@ -1,0 +1,46 @@
+{% from 'macros.html.twig' import timeleft %}
+
+<header class="container" id="header" role="banner">
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ asset('img/logo_big.png') }}" class="img-responsive center-block"/>
+            </div>
+            <div class="col-md-6">
+                <div class="slogan-container">
+                    <img src="{{ asset('img/slogan.png') }}" class="img-responsive center-block"
+                        alt="L'Embobineuse, pilier de la patate, sollicite un don pour ne pas perdre la frite !"/>
+                    <div class="donate-callout">
+                        <a class="btn btn-primary btn-lg btn-donate"
+                            href="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don" target="_blank">
+                            Faire un don !
+                        </a>
+                    </div>
+                </div>
+                <div class="campaign-stats">
+                    <div class="row">
+                        <div class="col-sm-6 text-center">
+                            <span class="glyphicon glyphicon-time"></span>
+                            {{ timeleft() }}
+                        </div>
+                        <div class="cold-sm-6 text-center">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <strong class="campaign-contributors">?</strong>
+                            donateurs
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <strong class="campaign-amount text-success">?</strong>
+                            collectés sur
+                            <strong class="text-danger">40 000 €</strong>
+                            nécessaires
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
