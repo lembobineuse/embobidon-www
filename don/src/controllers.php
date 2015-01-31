@@ -48,11 +48,12 @@ $app
         }
 
         $response = new JsonResponse();
+        $cache_lifetime = 3600; // 1 hour
         $response->setCache([
             'etag'          => md5($stats['amount']),
             'last_modified' => new \DateTime(),
-            'max_age'       => $app['cache_lifetime'],
-            's_maxage'      => $app['cache_lifetime'],
+            'max_age'       => $cache_lifetime,
+            's_maxage'      => $cache_lifetime,
             'private'       => false,
             'public'        => true,
         ]);
