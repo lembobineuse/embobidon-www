@@ -17,21 +17,24 @@
                     </div>
                 </div>
                 <div class="campaign-stats">
-                    <div class="campaign-countdown">
-                        <span class="glyphicon glyphicon-time"></span>
-                        {{ app['campaign_stats'].getTimeLeft().days }} jours restants
-                    </div>
-                    <div class="campaign-results" data-href="{{ path('stats') }}">
-                        <div>
-                            <span class="campaign-amount text-success">?</span>
-                            collectés sur
-                            <span class="text-danger">40 000 €</span>
-                            nécessaires
+                    <div class="row">
+                        <div class="col-sm-6 text-center">
+                            <span class="glyphicon glyphicon-time"></span>
+                            <strong>{{ app['campaign_stats'].getTimeLeft().days }}</strong>
+                            jours restants
                         </div>
-                        <div>
+                        <div class="cold-sm-6 text-center">
                             <span class="glyphicon glyphicon-heart"></span>
                             <strong class="campaign-donators">?</strong>
                             donateurs
+                        </div>
+                    </div>
+                    <div class="row" data-href="{{ path('stats') }}">
+                        <div class="col-md-12 text-center">
+                            <strong class="campaign-amount text-success">?</strong>
+                            collectés sur
+                            <strong class="text-danger">40 000 €</strong>
+                            nécessaires
                         </div>
                     </div>
                 </div>
