@@ -6,13 +6,17 @@ THUMB_GEOMETRY="200x200>"
 
 # ========== Goooooooo ! ========== #
 
-if hash parallel 2>/dev/null;
+if ! hash parallel 2>/dev/null;
 then
-    # M'kay !
-    echo "Generating thumnails..."
-else
     echo "GNU Parallel not found !"
     echo "Try $ apt-get install parallel"
+    exit 125
+fi
+
+if ! hash convert 2>/dev/null;
+then
+    echo "ImageMagick not found !"
+    echo "Try $ apt-get install imagemagick"
     exit 125
 fi
 
