@@ -7,7 +7,7 @@ $app['locale'] = 'fr';
 $app['cache_lifetime'] = 86400; // 24 hours
 
 $app['app_dir'] = __DIR__.'/../src'; 
-$app['tpl_dir'] = __DIR__.'/../templates'; 
+$app['tpl_dir'] = __DIR__.'/../resources/templates'; 
 $app['cache_dir'] = __DIR__.'/../cache';
 $app['log_dir'] = __DIR__.'/../log';
 $app['web_dir'] = __DIR__.'/../../htdocs/don';
