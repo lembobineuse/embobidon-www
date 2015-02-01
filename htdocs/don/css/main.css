@@ -187,3 +187,16 @@ a.list-group-item {
 .image-wall img {
     position: absolute;
 }
+
+
+
+/**
+ * =============== Fancybox ===============
+ **/
+
+/**
+ * Fixes GH issue #986
+ **/
+.fancybox-lock {
+    overflow: visible !important;
+}
