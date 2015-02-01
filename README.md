@@ -5,17 +5,19 @@
 
 Dependencies:
 
-    * [Composer](https://getcomposer.org/)
+    * [Composer](https://getcomposer.org/) for PHP dependencies.
+    * [npm](https://www.npmjs.com/) for Javascript dependencies.
 
 
 ```sh
-$ git clone https://github.com/lembobineuse/embobidon-www.git 
+$ git clone https://github.com/lembobineuse/embobidon-www.git
 $ cd embobidon-www/don/
 $ composer.phar install
+$ npm intall
+$ ./node_modules/.bin/gulp
 ```
 
 The server mut be given write access to these folders:
-
 ```
 embobidon-www/don/cache/
 embobidon-www/don/logs/
@@ -31,6 +33,18 @@ $ cd embibidon-www
 $ git pull origin master
 $ cd don/
 $ composer.phar update
+$ npm update
+$ ./node_modules/.bin/gulp
+```
+
+## Deploying
+
+Before uploading to production:
+
+Run [gulp](http://gulpjs.com/) to build statis assets (scripts, stylesheets, ...):
+```sh
+$ cd embobidon-www/don
+$ ./node_modules/.bin/gulp
 ```
 
 ## Usage
