@@ -5,7 +5,7 @@ body {
     font-size: 18px;
     color: #ccc;
     text-align: justify;
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 /* ==================== NAV =================== */
@@ -15,7 +15,6 @@ body {
     height: 11px;
     display: inline-block;
     background: url('../img/flags.png') no-repeat;
-    margin-right: 4px;
 }
 .lang-sm[lang="fr"] {
     background-position: 0 0;
