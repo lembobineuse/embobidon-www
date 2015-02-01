@@ -174,3 +174,16 @@ img.pull-left {
 a.list-group-item {
     color: #ccc;
 }
+
+.image-wall {
+    position: relative;
+}
+
+.image-wall a,
+.image-wall img {
+    display: inline-block;
+    transition: all 0.2s ease-out;
+}
+.image-wall img {
+    position: absolute;
+}

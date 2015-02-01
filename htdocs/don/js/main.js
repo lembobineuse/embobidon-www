@@ -19,6 +19,10 @@ $(function()
             $('.campaign-contributors').html(data.contributors);
         }
     );
+
+    $('.image-wall').imageWall({
+        maxHeight: 300
+    });
 });
 
 }(this, this.jQuery));
