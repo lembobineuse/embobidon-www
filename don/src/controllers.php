@@ -9,23 +9,23 @@ use Monolog\Logger;
 
 $app
     ->get('/{_locale}/{page}', function (Request $request, Application $app) {
+
         $page = $request->get('page');
+        try {
+            $body = $app['twig']->render('static/index.html.twig', [
+                'page' => $page
+            ]);
+        } catch (\Twig_Error_Loader $e) {
+            $app->abort(404);
+        }
 
-        $body = $app['twig']->render('static/index.html.twig', [
-            'page' => $page
-        ]);
-
-        $response = new Response($body);
-        $response->setCache([
-            'etag'          => md5($body),
+        return Response::create($body)->setCache([
             'last_modified' => new \DateTime(),
             'max_age'       => $app['cache_lifetime'],
             's_maxage'      => $app['cache_lifetime'],
             'private'       => false,
             'public'        => true,
         ]);
-
-        return $response;
     })
     ->assert('_locale', '^fr|en|ja$')
     ->value('_locale', 'fr')
@@ -53,20 +53,14 @@ $app
             ], 500);
         }
 
-        $response = new JsonResponse();
         $cache_lifetime = 3600; // 1 hour
-        $response->setCache([
-            'etag'          => md5($stats['amount']),
+        return JsonResponse::create($stats)->setCache([
             'last_modified' => new \DateTime(),
             'max_age'       => $cache_lifetime,
             's_maxage'      => $cache_lifetime,
             'private'       => false,
             'public'        => true,
         ]);
-        $response->setData($stats);
-
-        return $response;
-
     })
     ->bind('stats')
 ;
