@@ -35,7 +35,11 @@
     <!-- jQuery.fancybox -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
 
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    {% if app['debug'] %}
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    {% else %}
+        <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
+    {% endif %}
 
     <script>
         var Embobidon = {
@@ -68,10 +72,12 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js"></script>
 
-<!-- Embobidon -->
-<script src="{{asset('js/embobidon/image-wall.js') }}"></script>
-<!-- MAIN -->
-<script src="{{asset('js/main.js') }}"></script>
+{% if app['debug'] %}
+    <script src="{{ asset('js/embobidon/image-wall.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+{% else %}
+    <script src="{{ asset('js/all.min.js') }}"></script>
+{% endif %}
 
 
 <!-- Analytics -->
