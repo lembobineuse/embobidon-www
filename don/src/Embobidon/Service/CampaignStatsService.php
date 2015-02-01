@@ -25,7 +25,7 @@ class CampaignStatsService
      */
     public function getTimeLeft()
     {
-        $end = new \DateTime('2015-03-10');
+        $end = new \DateTime('2015-03-11');
         $now = new \DateTime();
         $diff = $now->diff($end);
 
