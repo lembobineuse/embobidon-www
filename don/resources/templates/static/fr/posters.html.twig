@@ -1,0 +1,30 @@
+<div class="page-header">
+    <h1>10 ans d'affiches</h1>
+</div>
+
+<div class="image-wall">
+{% for img in [
+    '2006-04_art-et-terrorisme-1-vert',
+    '2006-05-06',
+    '2008-05-10',
+    '2008-10',
+    '2008-12_art-et-terrorisme-4-jaune',
+    '2008-12_art-et-terrorisme-4-blanc',
+    '2009-02_3D',
+    '2009-06',
+    '2009-06-12_the-trend-is-dead',
+    '2010-11',
+    '2010-12-11_masqueride',
+    '2011_sevrage-tour',
+    '2011-06-24_crazy-carte-blanche_beige',
+    '2012-09-29',
+    '2012-11-09_the-ex',
+    '2013-10-31_festival-trickortreat'
+] %}
+
+<a class="fancybox" rel="group" href="{{ asset('img/posters/'~img~'.jpg') }}">
+    <img src="{{ asset('img/posters/'~img~'_tn.jpg') }}" />
+</a>
+
+{% endfor %}
+</div>
