@@ -5,6 +5,6 @@ __DIR__=$(dirname "$__FILE__")
 
 LOG_DIR="$__DIR__/../logs"
 
-rm -f $LOG_DIR/*
+find "$LOG_DIR" -name '*.log' -print0 | xargs -0 rm -f
 
 exit 0
