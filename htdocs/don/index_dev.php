@@ -18,8 +18,8 @@ use Symfony\Component\Debug\Debug;
 
 Debug::enable();
 
-$app = require $ROOT_DIR . '/don/src/app.php';
-require $ROOT_DIR . '/don/config/dev.php';
-require $ROOT_DIR . '/don/src/controllers.php';
+$app = require $ROOT_DIR . '/don/app/app.php';
+require $ROOT_DIR . '/don/app/config/dev.php';
+require $ROOT_DIR . '/don/app/controllers.php';
 
 $app->run();

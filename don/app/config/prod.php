@@ -6,11 +6,12 @@ use Monolog\Logger;
 $app['locale'] = 'fr';
 $app['cache_lifetime'] = 86400; // 24 hours
 
-$app['app_dir'] = __DIR__.'/../src';
-$app['tpl_dir'] = __DIR__.'/../resources/templates';
-$app['cache_dir'] = __DIR__.'/../cache';
-$app['log_dir'] = __DIR__.'/../logs';
-$app['web_dir'] = __DIR__.'/../../htdocs/don';
+$app['root_dir'] = __DIR__.'/../../../';
+$app['cache_dir'] = $app['root_dir'].'/don/cache';
+$app['log_dir'] = $app['root_dir'].'/don/logs';
+$app['web_dir'] = $app['root_dir'].'/htdocs/don';
+$app['app_dir'] = __DIR__.'/../';
+$app['tpl_dir'] = $app['app_dir'].'/resources/templates';
 
 // Twig
 $app['twig.path'] = $app['tpl_dir'];
