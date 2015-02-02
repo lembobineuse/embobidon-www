@@ -62,9 +62,6 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    {{ app['locale'] }} - {{ app['request'].get('_locale') }}
-                </li>
-                <li>
                     <a href="{{ app.path('page', {_locale: 'fr', page: 'lapelle'}) }}" title="Français / French">
                         <span class="lang-sm" lang="fr"></span>
                         <span class="sr-only">Français / French</span>
