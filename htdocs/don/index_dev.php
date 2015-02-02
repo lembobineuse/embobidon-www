@@ -10,16 +10,15 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }
 
-$ROOT_DIR = __DIR__.'/../..';
-require_once $ROOT_DIR . '/don/vendor/autoload.php';
+require_once __DIR__.'/../../don/vendor/autoload.php';
 
 use Symfony\Component\Debug\Debug;
 
 
 Debug::enable();
 
-$app = require $ROOT_DIR . '/don/app/app.php';
-require $ROOT_DIR . '/don/app/config/dev.php';
-require $ROOT_DIR . '/don/app/controllers.php';
+$app = require __DIR__ . '/../../don/app/app.php';
+require $app['config_dir'] . '/dev.php';
+require $app['app_dir'] . '/controllers.php';
 
 $app->run();

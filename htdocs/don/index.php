@@ -2,11 +2,10 @@
 
 ini_set('display_errors', 0);
 
-$ROOT_DIR = __DIR__.'/../..';
-require_once $ROOT_DIR . '/don/vendor/autoload.php';
+require_once __DIR__.'/../../don/vendor/autoload.php';
 
-$app = require $ROOT_DIR . '/don/app/app.php';
-require $ROOT_DIR . '/don/app/config/prod.php';
-require $ROOT_DIR . '/don/app/controllers.php';
+$app = require __DIR__ . '/../../don/app/app.php';
+require $app['config_dir'] . '/prod.php';
+require $app['app_dir'] . '/controllers.php';
 
 $app['http_cache']->run();

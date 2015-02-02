@@ -36,9 +36,9 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
 
     {% if app['debug'] %}
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/src/main.css') }}">
     {% else %}
-        <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/dist/all.min.css') }}">
     {% endif %}
 
     <script>
@@ -73,10 +73,10 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js"></script>
 
 {% if app['debug'] %}
-    <script src="{{ asset('js/embobidon/image-wall.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/src/image-wall.js') }}"></script>
+    <script src="{{ asset('js/src/main.js') }}"></script>
 {% else %}
-    <script src="{{ asset('js/all.min.js') }}"></script>
+    <script src="{{ asset('js/dist/all.min.js') }}"></script>
 {% endif %}
 
 
