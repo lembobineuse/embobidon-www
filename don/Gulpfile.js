@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 ;
 
 gulp.task('default', ['watch', 'styles', 'scripts']);
+gulp.task('build', ['styles', 'scripts']);
 
 gulp.task('watch', function ()
 {

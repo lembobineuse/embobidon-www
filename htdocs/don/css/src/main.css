@@ -14,7 +14,7 @@ body {
     width: 14px;
     height: 11px;
     display: inline-block;
-    background: url('../img/flags.png') no-repeat;
+    background: url('../../img/flags.png') no-repeat;
 }
 .lang-sm[lang="fr"] {
     background-position: 0 0;
@@ -31,7 +31,7 @@ body {
 #header .jumbotron,
 #footer
 {
-    background: #000 url('../img/green-dust-and-scratches.png');
+    background: #000 url('../../img/green-dust-and-scratches.png');
 }
 
 #header .jumbotron {
