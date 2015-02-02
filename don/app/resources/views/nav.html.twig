@@ -1,3 +1,4 @@
+{% trans_default_domain 'menu' %}
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
        <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,22 +23,22 @@
                     <ul class="dropdown-menu" role="menu">
                         <li>
                             <a href="{{ page('bateau-cool') }}">
-                                I. Embobineuse, le bateau cool
+                                {% trans %}I. Embobineuse, le bateau cool{% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('errorism') }}">
-                                II. Errorisme en questions (1944 - 2005)
+                                {% trans %}II. Errorisme en questions (1944 - 2005){% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('naufrage') }}">
-                                III. Économie d'un naufrage (2005 - 2014)
+                                {% trans %}III. Économie d'un naufrage (2005 - 2014){% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('odysseus') }}">
-                                IV. L'odyssée suit son cours ? (2014 - ????)
+                                {% trans %}IV. L'odyssée suit son cours ? (2014 - ????){% endtrans %}
                             </a>
                         </li>
                     </ul>
@@ -48,10 +49,14 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="{{ page('posters') }}">10 Ans d'Affiches</a>
+                            <a href="{{ page('posters') }}">
+                                {% trans %}10 Ans d'Affiches{% endtrans %}
+                            </a>
                         </li>
                         <li>
-                            <a href="{{ page('editos') }}">10 Ans d'Editos</a>
+                            <a href="{{ page('editos') }}">
+                                {% trans %}10 Ans d'Editos{% endtrans %}
+                            </a>
                         </li>
                     </ul>
                 </li>

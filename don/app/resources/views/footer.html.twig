@@ -1,19 +1,24 @@
+{% trans_default_domain 'footer' %}
 <footer class="container-fluid" id="footer" role="contentinfo">
 
     <div class="row">
 
         <div class="col-md-4 col-md-push-4">
             <p>
-                <strong>L'EMBOBINEUSE A BESOIN DE TOI !</strong>
+                <strong>
+                    {% trans %}L'EMBOBINEUSE A BESOIN DE TOI !{% endtrans %}
+                </strong>
             </p>
             <p>
                 <a href="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don" target="_blank"
                     class="btn btn-primary btn-donate" style="width: 100%">
-                    Fais un don !
+                    {% trans %}Fais un don !{% endtrans %}
                 </a>
             </p>
             <p>
-                <strong>Et fais tourner le message:</strong>
+                <strong>
+                    {% trans %}Et fais tourner le message:{% endtrans %}
+                </strong>
             </p>
             <p class="btn-group btn-group-justified">
                 <a class="btn btn-social btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://lembobineuse.biz/don" target="_blank">
@@ -42,7 +47,7 @@
         </div>
 
         <div class="col-md-4 col-md-push-4">
-            Plan de sauvetage:
+            {% trans %}Plan de sauvetage:{% endtrans %}
             <ul>
                 <li>
                     <a href="{{ page('lapelle') }}">Dōnum Apello</a>
@@ -51,16 +56,24 @@
                     Història Bobinüs
                     <ol>
                         <li>
-                            <a href="{{ page('bateau-cool') }}">Embobineuse, le bateau cool</a>
+                            <a href="{{ page('bateau-cool') }}">
+                                {% trans %}Embobineuse, le bateau cool{% endtrans %}
+                            </a>
                         </li>
                         <li>
-                            <a href="{{ page('errorism') }}">Errorisme en questions (1944 - 2005)</a>
+                            <a href="{{ page('errorism') }}">
+                                {% trans %}Errorisme en questions (1944 - 2005){% endtrans %}
+                            </a>
                         </li>
                         <li>
-                            <a href="{{ page('naufrage') }}">Économie d'un naufrage (2005 - 2014)</a>
+                            <a href="{{ page('naufrage') }}">
+                                {% trans %}Économie d'un naufrage (2005 - 2014){% endtrans %}
+                            </a>
                         </li>
                         <li>
-                            <a href="{{ page('odysseus') }}">L'odyssée suit son cours ? (2014 - ????)</a>
+                            <a href="{{ page('odysseus') }}">
+                                {% trans %}L'odyssée suit son cours ? (2014 - ????){% endtrans %}
+                            </a>
                         </li>
                     </ol>
                 </li>
@@ -68,10 +81,14 @@
                     Decennium Bobinum
                     <ul>
                         <li>
-                            <a href="{{ page('posters') }}">10 Ans d'Affiches</a>
+                            <a href="{{ page('posters') }}">
+                                {% trans %}10 Ans d'Affiches{% endtrans %}
+                            </a>
                         </li>
                         <li>
-                            <a href="{{ page('editos') }}">10 Ans d'Editos</a>
+                            <a href="{{ page('editos') }}">
+                                {% trans %}10 Ans d'Editos{% endtrans %}
+                            </a>
                         </li>
                     </ul>
                 </li>
