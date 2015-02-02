@@ -22,22 +22,22 @@
                     <ul class="dropdown-menu" role="menu">
                         <li>
                             <a href="{{ page('bateau-cool') }}">
-                                I. Embobineuse, le bateau cool
+                                I. {% trans %}Embobineuse, le bateau cool{% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('errorism') }}">
-                                II. Errorisme en questions (1944 - 2005)
+                                II. {% trans %}Errorisme en questions (1944 - 2005){% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('naufrage') }}">
-                                III. Économie d'un naufrage (2005 - 2014)
+                                III. {% trans %}Économie d'un naufrage (2005 - 2014){% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('odysseus') }}">
-                                IV. L'odyssée suit son cours ? (2014 - ????)
+                                IV. {% trans %}L'odyssée suit son cours ? (2014 - ????){% endtrans %}
                             </a>
                         </li>
                     </ul>
@@ -48,15 +48,22 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="{{ page('posters') }}">10 Ans d'Affiches</a>
+                            <a href="{{ page('posters') }}">
+                                {% trans %}10 Ans d'Affiches{% endtrans %}
+                            </a>
                         </li>
                         <li>
-                            <a href="{{ page('editos') }}">10 Ans d'Editos</a>
+                            <a href="{{ page('editos') }}">
+                                {% trans %}10 Ans d'Editos{% endtrans %}
+                            </a>
                         </li>
                     </ul>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li>
+                    {{ app['locale'] }} - {{ app['request'].get('_locale') }}
+                </li>
                 <li>
                     <a href="{{ app.path('page', {_locale: 'fr', page: 'lapelle'}) }}" title="Français / French">
                         <span class="lang-sm" lang="fr"></span>

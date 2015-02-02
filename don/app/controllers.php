@@ -7,6 +7,19 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Monolog\Logger;
 
 
+$app->get('/', function (Request $request, Application $app) {
+    return $app->redirect($app->url('page', [
+        '_locale' => $app['locale'] ?: 'fr',
+        'page' => 'lapelle'
+    ]));
+});
+$app->get('/{_locale}', function (Request $request, Application $app) {
+    return $app->redirect($app->url('page', [
+        '_locale' => $request->get('_locale'),
+        'page' => 'lapelle'
+    ]));
+});
+
 $app
     ->get('/{_locale}/{page}', function (Request $request, Application $app) {
 
@@ -28,9 +41,9 @@ $app
         ]);
     })
     ->assert('_locale', '^fr|en|ja$')
-    ->value('_locale', 'fr')
+    //->value('_locale', 'fr')
     ->assert('page', '[\w-]+')
-    ->value('page', 'lapelle')
+    //->value('page', 'lapelle')
     ->bind('page')
 ;
 
