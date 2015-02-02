@@ -52,7 +52,14 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 // ----- Translations
 $app->register(new TranslationServiceProvider(), [
     'locale_fallbacks' => ['fr'],
+    'locale' => $app['locale']
 ]);
+$app['translator.domains'] = [
+    'messages' => [
+        'fr' => require(__DIR__.'/../resources/translations/messages.fr.php'),
+        'en' => require(__DIR__.'/../resources/translations/messages.en.php'),
+    ]
+];
 
 // ----- Logging
 $app->register(new MonologServiceProvider(), [
