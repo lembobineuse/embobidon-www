@@ -18,7 +18,7 @@ $app->get('/{_locale}', function (Request $request, Application $app) {
         '_locale' => $request->get('_locale'),
         'page' => 'lapelle'
     ]));
-});
+})->assert('_locale', '^fr|en|ja$');
 
 $app
     ->get('/{_locale}/{page}', function (Request $request, Application $app) {
