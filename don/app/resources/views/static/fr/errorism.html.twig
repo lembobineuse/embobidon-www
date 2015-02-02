@@ -127,19 +127,13 @@
 	</p>
 </article>
 
-<nav>
-    <ul class="pager">
-        <li class="previous">
-            <a href="{{ page('bateau-cool') }}">
-                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                I. L'Embobineuse, le bateau cool
-            </a>
-        </li>
-        <li class="next">
-            <a href="{{ page('naufrage') }}">
-                III. Economie d'un naufrage
-                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-            </a>
-        </li>
-    </ul>
-</nav>
+{% include 'pager.html.twig' with {
+    'prev': {
+        'url': page('bateau-cool'),
+        'title': "I. L'Embobineuse, le bateau cool"
+    },
+    'next': {
+        'url': page('naufrage'),
+        'title': "III. Economie d'un naufrage"
+    },
+} %}

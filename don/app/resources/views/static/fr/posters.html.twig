@@ -29,19 +29,13 @@
 {% endfor %}
 </div>
 
-<nav>
-    <ul class="pager">
-        <li class="previous">
-            <a href="{{ page('odysseus') }}">
-                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                IV. Que l'odyssée suive son cours !
-            </a>
-        </li>
-        <li class="next">
-            <a href="{{ page('editos') }}">
-                10 ans d'Editos
-                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-            </a>
-        </li>
-    </ul>
-</nav>
+{% include 'pager.html.twig' with {
+    'prev': {
+        'url': page('odysseus'),
+        'title': "IV. Que l'odyssée suive son cours !"
+    },
+    'next': {
+        'url': page('editos'),
+        'title': "10 ans d'Editos"
+    },
+} %}

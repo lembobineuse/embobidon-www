@@ -68,19 +68,13 @@
     </p>
 </article>
 
-<nav>
-    <ul class="pager">
-        <li class="previous">
-            <a href="{{ page('lapelle') }}">
-                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                Dōnum Apello
-            </a>
-        </li>
-        <li class="next">
-            <a href="{{ page('errorism') }}">
-                II. Droit à l'erreur & remises en question
-                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-            </a>
-        </li>
-    </ul>
-</nav>
+{% include 'pager.html.twig' with {
+    'prev': {
+        'url': page('lapelle'),
+        'title': "Dōnum Apello"
+    },
+    'next': {
+        'url': page('errorism'),
+        'title': "II. Droit à l'erreur & remises en question"
+    },
+} %}

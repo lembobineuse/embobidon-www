@@ -617,19 +617,13 @@
     {{ edito_pics('2010-11', 'Novembre 2010') }}
 </article>
 
-<nav>
-    <ul class="pager">
-        <li class="previous">
-            <a href="{{ page('odysseus') }}">
-                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                IV. Que l'odyssée suive son cours !
-            </a>
-        </li>
-        <li class="next">
-            <a href="{{ page('lapelle') }}">
-                Dōnum Apello
-                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-            </a>
-        </li>
-    </ul>
-</nav>
+{% include 'pager.html.twig' with {
+    'prev': {
+        'url': page('odysseus'),
+        'title': "IV. Que l'odyssée suive son cours !"
+    },
+    'next': {
+        'url': page('lapelle'),
+        'title': "Dōnum Apello"
+    },
+} %}

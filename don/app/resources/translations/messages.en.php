@@ -14,7 +14,7 @@ return array (
     'donateurs' => 'contributors',
     'Économie d\'un naufrage (2005 - 2014)' => 'Économie d\'un naufrage (2005 - 2014)',
     'Embobineuse, le bateau cool' => 'Embobineuse, le bateau cool',
-    'Errorisme en questions (1944 - 2005)' => 'II. Errorisme en questions (1944 - 2005)',
+    'Errorisme en questions (1944 - 2005)' => 'Errorisme en questions (1944 - 2005)',
     'Et fais tourner le message:' => 'And spread the word:',
     'Faire un don !' => 'Donate now!',
     'Fais un don !' => 'Donate now!',

@@ -119,19 +119,13 @@
     </p>
 </article>
 
-<nav>
-    <ul class="pager">
-        <li class="previous">
-            <a href="{{ page('naufrage') }}">
-                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-                IV. Economie d'un naufrage
-            </a>
-        </li>
-        <li class="next">
-            <a href="{{ page('posters') }}">
-                10 ans d'Affiches
-                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-            </a>
-        </li>
-    </ul>
-</nav>
+{% include 'pager.html.twig' with {
+    'prev': {
+        'url': page('naufrage'),
+        'title': "III. Economie d'un naufrage"
+    },
+    'next': {
+        'url': page('posters'),
+        'title': "10 ans d'Affiches"
+    },
+} %}

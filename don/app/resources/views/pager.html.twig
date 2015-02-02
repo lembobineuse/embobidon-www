@@ -1,0 +1,23 @@
+<nav>
+    <ul class="pager">
+
+    {% if prev is defined %}
+        <li class="previous">
+            <a href="{{ prev.url }}">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+                {{ prev.title | trans }}
+            </a>
+        </li>
+    {% endif %}
+
+    {% if next is defined %}
+        <li class="next">
+            <a href="{{ next.url }}">
+                {{ next.title | trans }}
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            </a>
+        </li>
+    {% endif %}
+
+    </ul>
+</nav>
