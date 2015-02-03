@@ -5,18 +5,18 @@
         <div class="col-md-4 col-md-push-4">
             <p>
                 <strong>
-                    {% trans %}L'EMBOBINEUSE A BESOIN DE TOI !{% endtrans %}
+                    {% trans %}footer.title{% endtrans %}
                 </strong>
             </p>
             <p>
                 <a href="http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don" target="_blank"
                     class="btn btn-primary btn-donate" style="width: 100%">
-                    {% trans %}Fais un don !{% endtrans %}
+                    {% trans %}footer.button.donate{% endtrans %}
                 </a>
             </p>
             <p>
                 <strong>
-                    {% trans %}Et fais tourner le message:{% endtrans %}
+                    {% trans %}footer.share.title{% endtrans %}
                 </strong>
             </p>
             <p class="btn-group btn-group-justified">
@@ -35,58 +35,55 @@
             </p>
             <p>
                 <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                Conformément à la loi du 1er août 2003 relative au mécénat culturel,
-                les dons adressés à L'Embobineuse ouvrent droit à une réduction d’impôt
-                égale à 66% du montant du don,
-                dans la limite annuelle de 20 % du revenu imposable.
+                {% trans %}campaign.impots.infos{% endtrans %}
                 <a href="http://vosdroits.service-public.fr/particuliers/F426.xhtml" target="_blank">
-                    Plus d'information ici
-                </a>.
+                    {% trans %}campaign.impots.link.title{% endtrans %}
+                </a>
             </p>
         </div>
 
         <div class="col-md-4 col-md-push-4">
-            {% trans %}Plan de sauvetage:{% endtrans %}
+            {% trans %}sitemap.title{% endtrans %}
             <ul>
                 <li>
                     <a href="{{ page('lapelle') }}">Dōnum Apello</a>
                 </li>
                 <li>
                     Història Bobinüs
-                    <ol>
+                    <ul>
                         <li>
                             <a href="{{ page('bateau-cool') }}">
-                                {% trans %}Embobineuse, le bateau cool{% endtrans %}
+                                {% trans %}menu.historique.chap_1{% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('errorism') }}">
-                                {% trans %}Errorisme en questions (1944 - 2005){% endtrans %}
+                                {% trans %}menu.historique.chap_2{% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('naufrage') }}">
-                                {% trans %}Économie d'un naufrage (2005 - 2014){% endtrans %}
+                                {% trans %}menu.historique.chap_3{% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('odysseus') }}">
-                                {% trans %}L'odyssée suit son cours ? (2014 - ????){% endtrans %}
+                                {% trans %}menu.historique.chap_4{% endtrans %}
                             </a>
                         </li>
-                    </ol>
+                    </ul>
                 </li>
                 <li>
                     Decennium Bobinum
                     <ul>
                         <li>
                             <a href="{{ page('posters') }}">
-                                {% trans %}10 Ans d'Affiches{% endtrans %}
+                                {% trans %}menu.10ans.affiches{% endtrans %}
                             </a>
                         </li>
                         <li>
                             <a href="{{ page('editos') }}">
-                                {% trans %}10 Ans d'Editos{% endtrans %}
+                                {% trans %}menu.10ans.editos{% endtrans %}
                             </a>
                         </li>
                     </ul>

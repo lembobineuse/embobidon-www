@@ -2,10 +2,10 @@
     {% set time = app['campaign_stats'].getTimeLeft() %}
     {% if time['days'] > 0 %}
         <strong>{{ time['days'] }}</strong>
-        jours restants
-    {% else%}
+        {% trans %}campaign.timeleft.days{% endtrans %}
+    {% else %}
         <strong>{{ time['hours'] }}</strong>
-        heures restantes
+        {% trans %}campaign.timeleft.hours{% endtrans %}
     {% endif %}
 {% endmacro %}
 
