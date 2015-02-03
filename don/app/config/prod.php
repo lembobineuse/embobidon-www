@@ -4,10 +4,11 @@ use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\HttpCacheServiceProvider;
-use Silex\Provider\TranslationServiceProvider;
+use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Silex\Provider\MonologServiceProvider;
 use Monolog\Logger;
 
+use Embobidon\Provider\TranslationServiceProvider;
 use Embobidon\Service\CampaignStatsService;
 
 
@@ -52,7 +53,8 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
 // ----- Translations
 $app->register(new TranslationServiceProvider(), [
     'locale_fallbacks' => ['fr'],
-    'locale' => $app['locale']
+    'locale' => $app['locale'],
+    'translator.cache_dir' => $app['cache_dir'] . '/translations'
 ]);
 $app['translator'] = $app->share($app->extend('translator', function($translator, $app) {
     $translator->addLoader('yaml', new YamlFileLoader());
