@@ -1,4 +1,10 @@
-{% extends "layout.html" %}
-{% block content %}
-    Page not found.
+{% extends "errors/base.html.twig" %}
+{% block error %}
+    Page not found!
+{% endblock %}
+
+{% block message %}
+    <a class="btn btn-default" href="{{ page('lapelle') }}">
+        Back to homepage
+    </a>
 {% endblock %}
