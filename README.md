@@ -34,7 +34,7 @@ $ git pull origin master
 $ cd don/
 $ composer.phar update
 $ npm update
-$ ./node_modules/.bin/gulp
+$ bin/gulp watch
 ```
 
 ## Deploying
@@ -44,7 +44,7 @@ Before uploading to production:
 Run [gulp](http://gulpjs.com/) to build statis assets (scripts, stylesheets, ...):
 ```sh
 $ cd embobidon-www/don
-$ ./node_modules/.bin/gulp
+$ bin/gulp build
 ```
 
 ## Usage
