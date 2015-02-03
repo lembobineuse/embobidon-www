@@ -41,6 +41,8 @@ function ImageWall(container, options)
     this.listeners = {
         resize: $.proxy(debounce(this.layout, 150), this)
     };
+    // check whether we are already litening for window.onresize 
+    this.bound = false;
 
     this.init();
 }
@@ -51,31 +53,27 @@ ImageWall.prototype = {
     {
         $(this.container).addClass('image-wall');
         this.update();
-        $(window).on('resize', this.listeners.resize);
 
         return this;
     },
 
     update: function ()
     {
-        var self = this;
-        this.images = [];
-        this.widths = [];
-
-        $('img', this.container).each(function() {
-            var w = this.width,
-                h = this.height
-            ;
-            if (h !== self.maxHeight) {
-                // scale the image to match maxHeight
-                w = Math.floor(w * (self.maxHeight / h));
+        var self = this,
+            loader
+        ;
+        loader = imagesLoaded(this.container);
+        loader.on('progress', function(loader, image) {
+            if (!image.isLoaded) {
+                image.img.parentElement.removeChild(image.img);
             }
-            self.widths.push(w);
-            self.images.push(this);
+            self.collect();
+            self.layout();
+            if (!self.bound) {
+                self.bound = true;
+                $(window).on('resize', self.listeners.resize);
+            }
         });
-        this.numImages = this.images.length;
-
-        this.layout();
 
         return this;
     },
@@ -111,6 +109,25 @@ ImageWall.prototype = {
             return this;
         };
     }()),
+
+    collect: function ()
+    {
+        var self = this;
+        this.images = [];
+        this.widths = [];
+        $('img', this.container).each(function() {
+            var w = this.width,
+                h = this.height
+            ;
+            if (h !== self.maxHeight) {
+                // scale the image to match maxHeight
+                w = Math.floor(w * (self.maxHeight / h));
+            }
+            self.widths.push(w);
+            self.images.push(this);
+        });
+        this.numImages = this.images.length;
+    },
 
     /**
      * Private method that performs the actual layout operation.
