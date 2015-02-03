@@ -4,8 +4,8 @@
 # npm
 /don/node_modules
 # temp files
-/don/cache/*
-/don/logs/*
+/don/var/cache/*
+/don/var/logs/*
 
 # backup files
 *~
