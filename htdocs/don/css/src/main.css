@@ -9,7 +9,9 @@ body {
 }
 
 /* ==================== NAV =================== */
-
+.navbar-default .navbar-nav > li > a {
+    color: #bbb;
+}
 .lang-sm {
     width: 14px;
     height: 11px;
