@@ -5,12 +5,15 @@ var Embobidon = window.Embobidon;
 
 $(function()
 {
+    $('html').removeClass('no-js').addClass('js');
+
     $('.fancybox').fancybox({
         padding: 0,
         helpers : {
             media : {}
         }
     });
+
     $.getJSON(
         Embobidon.api.stats,
         function (data) {
@@ -23,6 +26,7 @@ $(function()
     $('.image-wall').imageWall({
         maxHeight: 300
     });
+
 });
 
 }(this, this.jQuery));

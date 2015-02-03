@@ -181,16 +181,17 @@ a.list-group-item {
     color: #ccc;
 }
 
-.image-wall {
+/**
+ * Image Wall plugin
+ **/
+.js .image-wall {
     position: relative;
 }
-
-.image-wall a,
-.image-wall img {
+.js .image-wall img {
     display: inline-block;
     transition: all 0.2s ease-out;
 }
-.image-wall img {
+.js .image-wall img {
     position: absolute;
 }
 
