@@ -78,6 +78,13 @@ strong {
 
 /* ==================== COMPONENTS ==================== */
 
+.page-header {
+    margin: 0 0 2em;
+}
+.page-header h1 {
+    margin: 0;
+}
+
 .image-grid {
     text-align: center;
     margin: 3em auto;
