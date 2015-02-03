@@ -54,12 +54,15 @@ $app->register(new TranslationServiceProvider(), [
     'locale_fallbacks' => ['fr'],
     'locale' => $app['locale']
 ]);
-$app['translator.domains'] = [
-    'messages' => [
-        'fr' => require(__DIR__.'/../resources/translations/messages.fr.php'),
-        'en' => require(__DIR__.'/../resources/translations/messages.en.php'),
-    ]
-];
+$app['translator'] = $app->share($app->extend('translator', function($translator, $app) {
+    $translator->addLoader('yaml', new YamlFileLoader());
+
+    $translator->addResource('yaml', __DIR__.'/../resources/translations/messages.fr.yml', 'fr');
+    $translator->addResource('yaml', __DIR__.'/../resources/translations/messages.en.yml', 'en');
+    $translator->addResource('yaml', __DIR__.'/../resources/translations/messages.ja.yml', 'ja');
+
+    return $translator;
+}));
 
 // ----- Logging
 $app->register(new MonologServiceProvider(), [

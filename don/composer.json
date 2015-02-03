@@ -12,6 +12,8 @@
         "monolog/monolog": "~1.12",
         "symfony/monolog-bridge": "~2.6",
         "silex/web-profiler": "~1.0",
-        "knplabs/console-service-provider": "~1.0"
+        "knplabs/console-service-provider": "~1.0",
+        "symfony/config": "~2.6",
+        "symfony/yaml": "~2.6"
     }
 }
