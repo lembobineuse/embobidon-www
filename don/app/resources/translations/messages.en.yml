@@ -1,0 +1,46 @@
+# Loco yaml export: Symfony YAML object
+# Project: Embobidon
+# Release: Working copy
+# Locale: en_US, English (USA)
+# Tagged: bouton-donner, en-tete, footer, header, menu, pied-de-page, widget-campagne
+# Exported by: ju1ius
+# Exported at: Mon, 02 Feb 2015 23:46:45 +0000
+
+campaign:
+    results:
+        amount: '%amount% collected out of 40 000 € required'
+        contributors: contributors
+    timeleft:
+        days: days left
+        hours: hours left
+    impots:
+        infos:
+        link:
+            url:
+            title: Find out more
+
+footer:
+    button:
+        donate: Donate now!
+    share:
+        title: 'Spread the word:'
+footer.title: L'EMBOBINEUSE NEEDS YOU!
+
+header:
+    title:
+    button:
+        donate: Donate now!
+
+menu:
+    10ans:
+        affiches: 10 Years of Posters
+        editos: 10 Years of Editorials
+
+historique:
+    chap_1:
+    chap_2:
+    chap_3:
+    chap_4:
+
+sitemap:
+    title: 'Rescue plan:'

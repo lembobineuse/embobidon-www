@@ -1,0 +1,39 @@
+# Loco yaml export: Symfony YAML object
+# Project: Embobidon
+# Release: Working copy
+# Locale: ja_JP, Japanese
+# Exported by: ju1ius
+# Exported at: Mon, 02 Feb 2015 23:32:09 +0000
+
+aguicheur:
+    part_1:
+    part_2:
+
+campaign:
+    results:
+        amount:
+        contributors:
+footer:
+    title:
+    button:
+        donate:
+    share:
+        title:
+
+header:
+    title:
+    button:
+        donate:
+
+menu:
+    10ans:
+        affiches:
+        editos:
+    historique:
+        chap_1:
+        chap_2:
+        chap_3:
+        chap_4:
+
+sitemap:
+    title:
