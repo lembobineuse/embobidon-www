@@ -8,12 +8,16 @@ use Symfony\Component\Translation\MessageSelector;
 use Symfony\Component\Translation\Loader\ArrayLoader;
 use Symfony\Component\Translation\Loader\XliffFileLoader;
 
-use Embobidon\Translator;
+use Embobidon\Translation\Translator;
 
 /**
  * Symfony Translation component Provider.
  *
+ * Updated to use the new $cacheDir parameter from
+ * symfony/translation >= 2.6
+ *
  * @author Fabien Potencier <fabien@symfony.com>
+ * @author ju1ius
  */
 class TranslationServiceProvider implements ServiceProviderInterface
 {

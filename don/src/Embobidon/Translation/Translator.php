@@ -1,14 +1,20 @@
 <?php
 
-namespace Embobidon;
+namespace Embobidon\Translation;
 
 use Symfony\Component\Translation\Translator as BaseTranslator;
 use Symfony\Component\Translation\MessageSelector;
+use Silex\Application;
+
 
 /**
  * Translator that gets the current locale from the Silex application.
+ * 
+ * Updated to use the new $cacheDir parameter from
+ * symfony/translation >= 2.6
  *
  * @author Fabien Potencier <fabien@symfony.com>
+ * @author ju1ius
  */
 class Translator extends BaseTranslator
 {
