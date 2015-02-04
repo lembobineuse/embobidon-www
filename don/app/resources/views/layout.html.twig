@@ -53,12 +53,14 @@
 <body>
 
 {% include 'nav.html.twig' %}
-{% include 'header.html.twig' %}
+
+{% block header %}
+    {% include 'header.html.twig' %}
+{% endblock %}
 
 <main class="container">
 
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
 
 </main>
 

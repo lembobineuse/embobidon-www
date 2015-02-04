@@ -1,11 +1,31 @@
 {% extends "layout.html.twig" %}
+{% block header %}
+    <div class="container">
+        <div class="page-header media">
+            <div class="media-left">
+                <img src="{{ asset('img/skull-and-headphones_small.png') }}">
+            </div>
+            <div class="media-body">
+                <h1 class="media-heading text-danger">
+                    {% block error %}{% endblock %}
+                </h1>
+                <div>
+                    <p>
+                        Try going back to the
+                        <a href="{{ page('donum-apello') }}">homepage</a>,
+                        or if you don't care about reading, just
+                        <a href="{{ app['donate_url'] }}" target="_blank">
+                            donate now !
+                        </a>
+                        <br>
+                        If the problem persists, feel free to 
+                        <a href="mailto:info@lembobineuse.biz">contact us</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <div class="page-header">
-        <h1 class="text-danger">
-            {% block error %}{% endblock %}
-        </h1>
-    </div>
-    <div>
-        {% block message %}{% endblock %}
-    </div>
 {% endblock %}
