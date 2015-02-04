@@ -2,10 +2,27 @@ html, body {
     height: 100%;
 }
 body {
+    position: relative;
+    margin-top: 80px;
     font-size: 18px;
     color: #ccc;
     text-align: justify;
-    margin-top: 80px;
+}
+
+/**
+ * Let our footer always stick to bottom,
+ * only for modern browsers
+ */
+body {
+    display: flex;
+    flex-direction: column;
+    jutify-content: space-between;
+}
+body > * {
+    flex: 0 1 auto;
+}
+body > main {
+    flex: 1 1 auto;
 }
 
 /* ==================== NAV =================== */
