@@ -17,4 +17,6 @@ $app['web_dir'] = $app['root_dir'].'/htdocs/don';
 
 $app['donate_url'] = 'http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don';
 
+$app['assets_version'] = require $app['config_dir'] . '/assets_version.php';
+
 return $app;
