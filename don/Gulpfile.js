@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     ],
     styles = [
         '../htdocs/don/css/src/main.css'
-    ]
+    ],
+    VERSION = '2'
 ;
 
 gulp.task('default', ['watch', 'styles', 'scripts']);
@@ -29,7 +30,7 @@ gulp.task('scripts', function ()
         .pipe(concat('all.js'))
         // This will minify and rename to foo.min.js
         .pipe(uglify())
-        .pipe(rename({ extname: '.min.js' }))
+        .pipe(rename({ extname: '_v' + VERSION + '.min.js' }))
         .pipe(gulp.dest('../htdocs/don/js/dist'))
     ;
 });
@@ -40,7 +41,7 @@ gulp.task('styles', function ()
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
         .pipe(concat('all.css'))
         .pipe(minifycss())
-        .pipe(rename({ extname: '.min.css'} ))
+        .pipe(rename({ extname: '_v' + VERSION + '.min.css'} ))
         .pipe(gulp.dest('../htdocs/don/css/dist'))
     ;
 });
