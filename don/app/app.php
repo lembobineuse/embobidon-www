@@ -15,4 +15,6 @@ $app['tpl_dir'] = __DIR__.'/resources/views';
 
 $app['web_dir'] = $app['root_dir'].'/htdocs/don';
 
+$app['donate_url'] = 'http://www.helloasso.com/associations/l-embobineuse/collectes/embobidon/faire-un-don';
+
 return $app;
