@@ -19,8 +19,7 @@ $ ./node_modules/.bin/gulp
 
 The server mut be given write access to these folders:
 ```
-embobidon-www/don/cache/
-embobidon-www/don/logs/
+embobidon-www/don/var/
 ```
 
 You can refer to the Symfony documentation on [setting up permissions](http://symfony.com/doc/current/book/installation.html#book-installation-permissions)
@@ -41,10 +40,11 @@ $ bin/gulp watch
 
 Before uploading to production:
 
-Run [gulp](http://gulpjs.com/) to build statis assets (scripts, stylesheets, ...):
 ```sh
 $ cd embobidon-www/don
-$ bin/gulp build
+$ bin/console clear:cache
+$ bin/console clear:logs
+$ bin/gulp deploy
 ```
 
 ## Usage
