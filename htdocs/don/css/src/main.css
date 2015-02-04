@@ -212,6 +212,9 @@ a.list-group-item {
     margin: 8px;
     vertical-align: middle;
 }
+.js .image-wall img {
+    opacity: 0;
+}
 .js .image-wall-container {
     position: relative;
 }
@@ -219,6 +222,7 @@ a.list-group-item {
     display: block;
     position: absolute;
     margin: 0;
+    opacity: 1;
     transition: all 0.2s ease-out;
 }
 
