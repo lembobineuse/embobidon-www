@@ -13,17 +13,17 @@ body {
  * Let our footer always stick to bottom,
  * only for modern browsers
  */
-body {
-    display: flex;
-    flex-direction: column;
-    jutify-content: space-between;
-}
-body > * {
-    flex: 0 1 auto;
-}
-body > main {
-    flex: 1 1 auto;
-}
+/*body {*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*jutify-content: space-between;*/
+/*}*/
+/*body > * {*/
+    /*flex: 0 1 auto;*/
+/*}*/
+/*body > main {*/
+    /*flex: 1 1 auto;*/
+/*}*/
 
 /* ==================== NAV =================== */
 .navbar-default .navbar-nav > li > a {
