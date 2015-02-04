@@ -13,7 +13,7 @@ $app->get('/', function (Request $request, Application $app) {
         'page' => 'donum-apello'
     ]));
 });
-$app->get('/{_locale}', function (Request $request, Application $app) {
+$app->get('/{_locale}/', function (Request $request, Application $app) {
     return $app->redirect($app->url('page', [
         '_locale' => $request->get('_locale'),
         'page' => 'donum-apello'
@@ -21,7 +21,7 @@ $app->get('/{_locale}', function (Request $request, Application $app) {
 })->assert('_locale', '^fr|en|ja$');
 
 $app
-    ->get('/{_locale}/{page}', function (Request $request, Application $app) {
+    ->get('/{_locale}/{page}/', function (Request $request, Application $app) {
 
         $page = $request->get('page');
         try {
@@ -47,7 +47,7 @@ $app
 
 // Fetch campaign stats, Return JSON Response
 $app
-    ->get('/campaign_stats', function (Request $request, Application $app) {
+    ->get('/campaign_stats/', function (Request $request, Application $app) {
 
         $service = $app['campaign_stats'];
         try {
