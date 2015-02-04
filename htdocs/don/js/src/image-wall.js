@@ -51,7 +51,6 @@ ImageWall.prototype = {
 
     init: function ()
     {
-        $(this.container).addClass('image-wall');
         this.update();
 
         return this;
@@ -59,14 +58,14 @@ ImageWall.prototype = {
 
     update: function ()
     {
-        var self = this,
-            loader
-        ;
-        loader = imagesLoaded(this.container);
-        loader.on('progress', function(loader, image) {
+        var self = this;
+
+        $(this.container).imagesLoaded()
+            .progress(function (loader, image) {
             if (!image.isLoaded) {
-                image.img.parentElement.removeChild(image.img);
+                $(image.img).remove();
             }
+        }).always(function () {
             self.collect();
             self.layout();
             if (!self.bound) {
@@ -81,7 +80,7 @@ ImageWall.prototype = {
     destroy: function ()
     {
         $(window).off('resize', this.listeners.resize);
-        $(this.container).removeClass('image-wall');
+        $(this.container).removeClass('image-wall-container');
         this.container.style.minHeight = null;
         $(this.images).each(function () {
             this.style.width = this.style.height = this.style.margin = null;
@@ -115,7 +114,7 @@ ImageWall.prototype = {
         var self = this;
         this.images = [];
         this.widths = [];
-        $('img', this.container).each(function() {
+        $('img', this.container).each(function () {
             var w = this.width,
                 h = this.height
             ;
@@ -127,10 +126,11 @@ ImageWall.prototype = {
             self.images.push(this);
         });
         this.numImages = this.images.length;
+        $(this.container).addClass('image-wall-container');
     },
 
     /**
-     * Private method that performs the actual layout operation.
+     * Private method that performs the layout alogrithm.
      */
     doLayout: function ()
     {
@@ -264,6 +264,9 @@ ImageWall.prototype = {
         }
     },
 
+    /**
+     * Private method. Applies computed dimensions to our images.
+     */
     applyDimensions: function (dimensions)
     {
         var dim, img,

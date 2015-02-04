@@ -203,17 +203,24 @@ a.list-group-item {
 /**
  * Image Wall plugin
  **/
-.js .image-wall {
+.image-wall {
+    position: auto;
+    text-align: justify;
+}
+.image-wall img {
+    display: inline-block;
+    margin: 8px;
+    vertical-align: middle;
+}
+.js .image-wall-container {
     position: relative;
 }
-.js .image-wall img {
-    display: inline-block;
+.js .image-wall-container img {
+    display: block;
+    position: absolute;
+    margin: 0;
     transition: all 0.2s ease-out;
 }
-.js .image-wall img {
-    position: absolute;
-}
-
 
 
 /**
