@@ -37,6 +37,8 @@ DirectoryIndex index.php
     # Uncomment the following rules to redirect everything else
     # to this page during maintenance operations.
     #RewriteCond %{REQUEST_URI} !maintenance.html
+    ## Do not redirect the maintainer !
+    ##RewriteCond %{REMOTE_ADDR} !^111\.111\.111\.111$ 
     #RewriteCond %{REQUEST_FILENAME} !\.(css|js|jpg|png|gif)$
     #RewriteRule .? %{ENV:BASE}/maintenance.html [R=307,L]
 
