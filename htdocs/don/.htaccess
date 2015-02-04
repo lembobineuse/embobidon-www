@@ -34,6 +34,12 @@ DirectoryIndex index.php
     RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
     RewriteRule ^(.*) - [E=BASE:%1]
 
+    # Uncomment the following rules to redirect everything else
+    # to this page during maintenance operations.
+    #RewriteCond %{REQUEST_URI} !maintenance.html
+    #RewriteCond %{REQUEST_FILENAME} !\.(css|js|jpg|png|gif)$
+    #RewriteRule .? %{ENV:BASE}/maintenance.html [R=307,L]
+
     # Redirect to URI without front controller to prevent duplicate content
     # (with and without `/app.php`). Only do this redirect on the initial
     # rewrite by Apache and not on subsequent cycles. Otherwise we would get an
