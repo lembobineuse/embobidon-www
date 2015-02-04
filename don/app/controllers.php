@@ -10,13 +10,13 @@ use Monolog\Logger;
 $app->get('/', function (Request $request, Application $app) {
     return $app->redirect($app->url('page', [
         '_locale' => $app['locale'] ?: 'fr',
-        'page' => 'lapelle'
+        'page' => 'donum-apello'
     ]));
 });
 $app->get('/{_locale}', function (Request $request, Application $app) {
     return $app->redirect($app->url('page', [
         '_locale' => $request->get('_locale'),
-        'page' => 'lapelle'
+        'page' => 'donum-apello'
     ]));
 })->assert('_locale', '^fr|en|ja$');
 
