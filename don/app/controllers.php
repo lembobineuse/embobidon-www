@@ -41,9 +41,7 @@ $app
         ]);
     })
     ->assert('_locale', '^fr|en|ja$')
-    //->value('_locale', 'fr')
-    ->assert('page', '[\w-]+')
-    //->value('page', 'lapelle')
+    ->assert('page', '[\w/-]+')
     ->bind('page')
 ;
 
