@@ -7,6 +7,8 @@ var gulp = require('gulp'),
     replace = require('gulp-replace'),
 
     fs = require('fs'),
+    path = require('path'),
+    del = require('del'),
 
     scripts = [
         '../htdocs/don/js/src/image-wall.js',
@@ -15,14 +17,15 @@ var gulp = require('gulp'),
     styles = [
         '../htdocs/don/css/src/main.css'
     ],
-    VERSION_RX = /^return (\d+);/m,
-    VERSION
+    VERSION,
+    VERSION_FILE = 'app/config/assets_version.php',
+    VERSION_RX = /^return (\d+);/m
 ;
 
 
 function readVersion ()
 {
-    var subject = fs.readFileSync('app/config/assets_version.php', {encoding: 'utf-8'}),
+    var subject = fs.readFileSync(VERSION_FILE, {encoding: 'utf-8'}),
         version = VERSION_RX.exec(subject)[1]
     ;
     if (!version) {
@@ -32,9 +35,10 @@ function readVersion ()
 }
 VERSION = readVersion();
 
+
 gulp.task('default', ['watch', 'styles', 'scripts']);
 gulp.task('build', ['styles', 'scripts']);
-gulp.task('deploy', ['bump', 'build']);
+gulp.task('deploy', ['clean', 'bump', 'build']);
 
 gulp.task('watch', function ()
 {
@@ -69,9 +73,16 @@ gulp.task('styles', function ()
 gulp.task('bump', function ()
 {
     VERSION += 1;
-    return gulp.src('app/config/assets_version.php')
+    return gulp.src(VERSION_FILE)
         .pipe(replace(/^return (\d+);/m, function () {
             return 'return ' + VERSION + ';';
-        })).pipe(gulp.dest('replace_test'))
+        })).pipe(gulp.dest(path.dirname(VERSION_FILE)))
     ;
+});
+
+gulp.task('clean', function (cb) {
+    del([
+        '../htdocs/don/css/dist/all_v*.min.css',
+        '../htdocs/don/js/dist/all_v*.min.js'
+    ], {force: true}, cb);
 });
