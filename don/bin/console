@@ -5,8 +5,8 @@ set_time_limit(0);
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$app = require __DIR__.'/app.php';
-require __DIR__.'/config/cli.php';
+$app = require __DIR__.'/../app/app.php';
+require $app['config_dir'].'/cli.php';
 
 $cli = $app['console'];
 $cli->run();
