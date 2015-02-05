@@ -5,7 +5,7 @@ use Knp\Console\ConsoleEvents;
 use Knp\Console\ConsoleEvent;
 
 use Embobidon\Command\ClearCacheCommand;
-use Embobidon\Command\ClearLogCommand;
+use Embobidon\Command\ClearLogsCommand;
 
 
 $app->register(new ConsoleServiceProvider(), [
@@ -17,5 +17,5 @@ $app->register(new ConsoleServiceProvider(), [
 $app['dispatcher']->addListener(ConsoleEvents::INIT, function(ConsoleEvent $event) {
     $cli = $event->getApplication();
     $cli->add(new ClearCacheCommand());
-    $cli->add(new ClearLogCommand());
+    $cli->add(new ClearLogsCommand());
 });

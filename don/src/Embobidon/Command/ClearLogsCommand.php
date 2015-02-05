@@ -11,15 +11,15 @@ use \FilesystemIterator as FsIt;
 
 
 /**
- * Class ClearLogCommand
+ * Class ClearLogsCommand
  * @author ju1ius
  */
-class ClearLogCommand extends Command
+class ClearLogsCommand extends Command
 {
     protected function configure()
     {
         $this
-            ->setName('clear:log')
+            ->setName('clear:logs')
             ->setDescription('Clears the application logs')
         ;
     }
