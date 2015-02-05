@@ -14,7 +14,7 @@ $ git clone https://github.com/lembobineuse/embobidon-www.git
 $ cd embobidon-www/don/
 $ composer.phar install
 $ npm intall
-$ ./node_modules/.bin/gulp
+$ bin/gulp watch # or bin/gulp build
 ```
 
 The server mut be given write access to these folders:
