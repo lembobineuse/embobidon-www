@@ -226,11 +226,33 @@ a.list-group-item {
     transition: all 0.2s ease-out;
 }
 
+.comment-list {
+    background: #060606;
+    color: #ccc;
+}
+.comment {
+    padding: 0.618em;
+    border-bottom: 1px solid #333;
+}
+.comment__donation,
+.comment__supporter {
+    color: #fff;
+    font-weight: bold;
+}
+.comment__donation {
+    float: right;
+}
+.comment__content {
+    font-style: italic;
+}
+
 
 /**
  * =============== Fancybox ===============
  **/
-
+.fancybox-skin {
+    background-color: #151515;
+}
 /**
  * Fixes GH issue #986
  **/

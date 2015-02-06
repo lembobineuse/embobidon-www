@@ -38,32 +38,82 @@ class CampaignStatsService
     public function fetchStats()
     {
         $content = self::fetchURL(self::CAMPAIGN_URL);
+        $xpath = self::getXPath($content);
 
-        $dom = new \DOMDocument();
-        // Suppress warnings caused by HTML5 elements
-        libxml_use_internal_errors(true);
-        $dom->loadHTML($content, defined('LIBXML_COMPACT') ? LIBXML_COMPACT : 0);
-        libxml_clear_errors();
-        libxml_use_internal_errors(false);
-
-        $xpath = new \DOMXPath($dom);
         $stats = [
-            'amount' => null,
-            'contributors' => null
+            'amount' => self::extractAmount($xpath),
+            'contributors' => self::extractContributors($xpath),
+            'comments' => self::extractComments($xpath)
         ];
-
-        $nodes = $xpath->query('//*[@id="collecteMoney"]');
-        if ($nodes->length) {
-            $stats['amount'] = trim($nodes->item(0)->nodeValue);
-        }
-        $nodes = $xpath->query('//*[@id="nbDonateurs"]');
-        if ($nodes->length) {
-            $stats['contributors'] = trim($nodes->item(0)->nodeValue);
-        }
 
         return $stats;
     }
-    
+
+    public function fetchComments()
+    {
+        $content = self::fetchURL(self::CAMPAIGN_URL);
+        $xpath = self::getXPath($content);
+        
+        return self::extractComments($xpath);
+    }
+
+    private static function getXPath($source)
+    {
+        $dom = new \DOMDocument();
+        // Suppress warnings caused by HTML5 elements
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($source, defined('LIBXML_COMPACT') ? LIBXML_COMPACT : 0);
+        libxml_clear_errors();
+        libxml_use_internal_errors(false);
+
+        return new \DOMXPath($dom);
+    }
+
+    private static function extractAmount(\DOMXPath $xpath)
+    {
+        $nodes = $xpath->query('//*[@id="collecteMoney"]');
+        if ($nodes->length) {
+            return trim($nodes->item(0)->nodeValue);
+        }
+    }
+
+    private static function extractContributors(\DOMXPath $xpath)
+    {
+        $nodes = $xpath->query('//*[@id="nbDonateurs"]');
+        if ($nodes->length) {
+            return trim($nodes->item(0)->nodeValue);
+        }
+    }
+
+    private static function extractComments(\DOMXPath $xpath)
+    {
+        $contributors = [];
+        $nodes = $xpath->query('//*[@class="comment"]');
+        for ($i = 0, $l = $nodes->length; $i < $l; $i++) {
+            $contributor = [
+                'name' => null,
+                'donation' => null,
+                'comment' => null
+            ];
+            $node = $nodes->item($i);
+            $name_nodes = $xpath->query('./*[@class="name"]', $node);
+            if ($name_nodes->length) {
+                $contributor['name'] = trim($name_nodes->item(0)->nodeValue);
+            }
+            $donation_nodes = $xpath->query('./*[@class="don"]', $node);
+            if ($donation_nodes->length) {
+                $contributor['donation'] = trim($donation_nodes->item(0)->nodeValue);
+            }
+            $comment_nodes = $xpath->query('./*[@class="content"]', $node);
+            if ($comment_nodes->length) {
+                $contributor['comment'] = trim($comment_nodes->item(0)->nodeValue);
+            }
+            $contributors[] = $contributor;
+        }
+
+        return $contributors;
+    }
+
     private static function fetchURL($url)
     {
         $options = [

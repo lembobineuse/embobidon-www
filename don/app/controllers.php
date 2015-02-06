@@ -41,31 +41,33 @@ $app
         ]);
     })
     ->assert('_locale', '^fr|en|ja$')
-    ->assert('page', '[\w/-]+')
+    ->assert('page', '[\w-]+(/[\w-]+)*')
     ->bind('page')
 ;
 
-// Fetch campaign stats, Return JSON Response
 $app
-    ->get('/campaign_stats/', function (Request $request, Application $app) {
-
-        $service = $app['campaign_stats'];
+    ->get('/api/comment', function (Request $request, Application $app) {
         try {
-            $stats = $service->fetchStats();
+            $comments = $app['campaign_stats']->fetchComments();
         } catch (\Exception $e) {
             $app->log(
                 $e->getMessage(),
-                ['request_url' => '/campaign_stats'],
+                ['request_url' => '/api/comment'],
                 Logger::ERROR
             );
             return $app->json([
-                'message' => $e->getMessage(),
+                'error' => $e->getMessage(),
                 'status' => 500
             ], 500);
         }
 
+        $data = [
+            'status' => 200,
+            'result' => $comments
+        ];
         $cache_lifetime = 3600; // 1 hour
-        return JsonResponse::create($stats)->setCache([
+
+        return JsonResponse::create($data)->setCache([
             'last_modified' => new \DateTime(),
             'max_age'       => $cache_lifetime,
             's_maxage'      => $cache_lifetime,
@@ -73,7 +75,7 @@ $app
             'public'        => true,
         ]);
     })
-    ->bind('stats')
+    ->bind('api_comment_list')
 ;
 
 $app->error(function (\Exception $e, $code) use ($app) {

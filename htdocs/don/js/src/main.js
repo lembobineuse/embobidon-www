@@ -3,6 +3,37 @@
 
 var Embobidon = window.Embobidon;
 
+function getComments ()
+{
+    return $.ajax({
+        url: Embobidon.api.comment_list,
+        dataType: 'json'
+    });
+}
+
+function renderComments (data)
+{
+    var container = $('<div class="comment-list"/>'),
+        html = ''
+    ;
+    $.each(data.result, function (i, item) {
+        html +=
+            '<div class="comment">' +
+                '<div class="comment__donation">' +
+                    item.donation +
+                '</div>' +
+                '<div class="comment__supporter">' +
+                    item.name +
+                '</div>' +
+                '<div class="comment__content">' +
+                    item.comment +
+                '</div>' +
+            '</div>'
+        ;
+    });
+    return container.html(html);
+}
+
 $(function()
 {
     $('html').removeClass('no-js').addClass('js');
@@ -15,17 +46,27 @@ $(function()
     });
 
     $.getJSON(
-        Embobidon.api.stats,
+        'http://api.helloasso.com/l-embobineuse',
         function (data) {
-            console.log(data);
-            $('.campaign-amount').html(data.amount);
-            $('.campaign-contributors').html(data.contributors);
+            $('.campaign-amount').html(data.funding + ' €');
+            $('.campaign-contributors')
+                .html(data.supporters)
+                .parent()
+                    .css('cursor', 'pointer')
+                    .on('click', function () {
+                        $.fancybox.showLoading();
+                        getComments().done(function (data) {
+                            var el = renderComments(data);
+                            $.fancybox(el, { maxWidth: 720 });
+                        }).always(function () {
+                            $.fancybox.hideLoading();
+                        });
+                    })
+            ;
         }
     );
 
-    $('.image-wall').imageWall({
-        maxHeight: 300
-    });
+    $('.image-wall').imageWall({ maxHeight: 300 });
 
 });
 
