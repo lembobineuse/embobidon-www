@@ -68,6 +68,16 @@ $(function()
 
     $('.image-wall').imageWall({ maxHeight: 300 });
 
+    if ($('#supporters').length) {
+        $.fancybox.showLoading();
+        getComments().done(function (data) {
+            var el = renderComments(data);
+            $('#supporters').append(el);
+        }).always(function () {
+            $.fancybox.hideLoading();
+        });
+    }
+
 });
 
 }(this, this.jQuery));
