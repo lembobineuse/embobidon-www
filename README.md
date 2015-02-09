@@ -5,8 +5,8 @@
 
 Dependencies:
 
-    * [Composer](https://getcomposer.org/) for PHP dependencies.
-    * [npm](https://www.npmjs.com/) for Javascript dependencies.
+   * [Composer](https://getcomposer.org/) for PHP dependencies.
+   * [npm](https://www.npmjs.com/) for Javascript dependencies.
 
 
 ```sh
