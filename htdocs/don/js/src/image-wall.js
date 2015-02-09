@@ -274,7 +274,7 @@ ImageWall.prototype = {
             l = dimensions.length,
             last = dimensions[l - 1]
         ;
-        this.container.style.minHeight = (last.y + last.height + this.margin) + 'px';
+        this.container.style.minHeight = (last.y + last.height + (this.margin*2)) + 'px';
         for (i, l; i < l; i++) {
             dim = dimensions[i];
             img = this.images[i];
@@ -309,7 +309,10 @@ $[pluginName] = $.fn[pluginName] = function (options)
         return $.extend(defaults, options);
     }
     return this.each(function() {
+        var $el = $(this);
 	    if (!$.data(this, "plugin_" + pluginName)) {
+            options.maxHeight = parseInt($el.attr('data-imagewall-height'), 10) || options.maxHeight;
+            options.margin = parseInt($el.attr('data-imagewall-margin'), 10) || options.margin;
             $.data(this, "plugin_" + pluginName, new ImageWall(this, options));
         }
     });

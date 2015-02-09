@@ -84,19 +84,19 @@
     </a>
 </div>
 
-<div class="well well-lg image-grid">
-
-{{ fancythumbs([
-    "concerts/concert_01",
-    "concerts/concert_04",
-    "concerts/concert_05",
-    "concerts/concert_03",
-    "concerts/concert_02",
-    "posters/2008-12_art-et-terrorisme-4",
-    "perf/masqueride-embob-13",
-    "salle/salle-01"
-]) }}
-
+<div class="well well-lg">
+    <div class="image-wall" data-imagewall-height="140">
+        {{ fancythumbs([
+            "concerts/concert_01",
+            "concerts/concert_04",
+            "concerts/concert_05",
+            "concerts/concert_03",
+            "concerts/concert_02",
+            "posters/2008-12_art-et-terrorisme-4",
+            "perf/masqueride-embob-13",
+            "salle/salle-01"
+        ]) }}
+    </div>
 </div>
 
 <article class="row">
@@ -157,6 +157,6 @@
 {% include 'pager.html.twig' with {
     'next': {
         'url': page('historia/01-bateau-cool'),
-        'title': "Història Bobinüs"
+        'title': "menu.historique"
     },
 } %}
