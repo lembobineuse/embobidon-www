@@ -6,41 +6,31 @@
 # Exported by: ju1ius
 # Exported at: Mon, 02 Feb 2015 23:46:45 +0000
 
-campaign:
-    results:
-        amount: '%amount% collected out of 40 000 € required'
-        contributors: contributors
-    timeleft:
-        days: days left
-        hours: hours left
-    impots:
-        infos:
-        link:
-            url:
-            title: Find out more
+campaign.title:
+campaign.results.amount: 'collected out of <strong class="text-danger">40 000 €</strong> required'
+campaign.results.contributors: contributors
+campaign.timeleft.days: days left
+campaign.timeleft.hours: hours left
+campaign.impots.infos:
+campaign.infos.link.url:
+campaign.infos.link.title: Find out more
 
-footer:
-    button:
-        donate: Donate now!
-    share:
-        title: 'Spread the word:'
-footer.title: L'EMBOBINEUSE NEEDS YOU!
+footer.title:  L'EMBOBINEUSE NEEDS YOU!
+footer.button.donate: Donate now!
+footer.share.title: 'Spread the word:'
+footer.share.infos:
 
-header:
-    title:
-    button:
-        donate: Donate now!
+header.button.donate: Donate now!
 
-menu:
-    10ans:
-        affiches: 10 Years of Posters
-        editos: 10 Years of Editorials
+menu.appel_don:
+menu.10ans:
+menu.10ans.affiches: 10 Years of Posters
+menu.10ans.editos: 10 Years of Editorials
+menu.historique:
+menu.historique.chap_1:
+menu.historique.chap_2:
+menu.historique.chap_3:
+menu.historique.chap_4:
 
-historique:
-    chap_1:
-    chap_2:
-    chap_3:
-    chap_4:
-
-sitemap:
-    title: 'Rescue plan:'
+sitemap.title: 'Rescue plan:'
+editos.toc: Table of Contents

@@ -5,35 +5,29 @@
 # Exported by: ju1ius
 # Exported at: Mon, 02 Feb 2015 23:32:09 +0000
 
-aguicheur:
-    part_1:
-    part_2:
 
-campaign:
-    results:
-        amount:
-        contributors:
-footer:
-    title:
-    button:
-        donate:
-    share:
-        title:
+campaign.title: "L'Embobineuseが生き残るために、募金中"
+campaign.results.amount:
+campaign.results.contributors:
+campaign.timeleft.days:
+campaign.timeleft.hours:
+campaign.impots.infos:
+campaign.impots.link.url:
+campaign.impots.link.title:
 
-header:
-    title:
-    button:
-        donate:
+footer.title:
+footer.button.donate:
+footer.share.title:
+footer.infos:
 
-menu:
-    10ans:
-        affiches:
-        editos:
-    historique:
-        chap_1:
-        chap_2:
-        chap_3:
-        chap_4:
+header.title:
+header.button.donate:
 
-sitemap:
-    title:
+menu.10ans.affiches:
+menu.10ans.editos:
+menu.historique.chap_1:
+menu.historique.chap_2:
+menu.historique.chap_3:
+menu.historique.chap_4:
+
+sitemap.title:
