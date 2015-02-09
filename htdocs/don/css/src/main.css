@@ -9,21 +9,11 @@ body {
     text-align: justify;
 }
 
-/**
- * Let our footer always stick to bottom,
- * only for modern browsers
- */
-/*body {*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*jutify-content: space-between;*/
-/*}*/
-/*body > * {*/
-    /*flex: 0 1 auto;*/
-/*}*/
-/*body > main {*/
-    /*flex: 1 1 auto;*/
-/*}*/
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
 
 /* ==================== NAV =================== */
 .navbar-default .navbar-nav > li > a {
@@ -79,6 +69,21 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 0.5em 0;
     text-align: left;
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2.5em;
+}
+h3 {
+    font-size: 2em;
+}
+h4 {
+    font-size: 1.5em;
+}
+h5, h6 {
+    font-size: 1em;
 }
 p {
     margin-bottom: 1em;
