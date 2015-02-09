@@ -10,7 +10,7 @@
             <div class="col-md-6">
                 <div class="slogan-container">
                     <img src="{{ asset('img/slogan.png') }}" class="img-responsive center-block"
-                        alt="L'Embobineuse, pilier de la patate, sollicite un don pour ne pas perdre la frite !"/>
+                        alt="{% trans %}campaign.title{% endtrans %}"/>
                     <div class="donate-callout">
                         <a class="btn btn-primary btn-lg btn-donate"
                             href="{{ app['donate_url'] }}" target="_blank">
@@ -33,9 +33,7 @@
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <strong class="campaign-amount text-success">?</strong>
-                            collectés sur
-                            <strong class="text-danger">40 000 €</strong>
-                            nécessaires
+                            {% trans %}campaign.results.amount{% endtrans %}
                         </div>
                     </div>
                 </div>

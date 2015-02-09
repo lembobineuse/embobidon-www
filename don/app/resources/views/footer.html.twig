@@ -20,23 +20,27 @@
                 </strong>
             </p>
             <p class="btn-group btn-group-justified">
-                <a class="btn btn-social btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://lembobineuse.biz/don" target="_blank">
+                <a class="btn btn-social btn-facebook"
+                    href="https://www.facebook.com/sharer/sharer.php?u=http://lembobineuse.biz/don" target="_blank">
                     Facebook
                 </a>
-                <a class="btn btn-social btn-twitter" href="https://twitter.com/home?status=L'Embobineuse,%20pilier%20de%20la%20patate,%20sollicite%20vos%20dons%20pour%20ne%20pas%20perdre%20la%20frite%20!%0Ahttp://lembobineuse.biz/don" target="_blank">
+                <a class="btn btn-social btn-twitter"
+                    href="https://twitter.com/home?status={{ 'campaign.title'|trans|url_encode }}%0Ahttp://lembobineuse.biz/don" target="_blank">
                     Twitter
                 </a>
-                <a class="btn btn-social btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://lembobineuse.biz/don&title=L'Embobineuse,%20pilier%20de%20la%20patate,%20sollicite%20vos%20dons%20pour%20ne%20pas%20perdre%20la%20frite%20!" target="_blank">
+                <a class="btn btn-social btn-linkedin"
+                    href="https://www.linkedin.com/shareArticle?mini=true&url=http://lembobineuse.biz/don&title={{ 'campaign.title'|trans|url_encode }}" target="_blank">
                     LinkedIn
                 </a>
-                <a class="btn btn-social btn-google-plus" href="https://plus.google.com/share?url=http://lembobineuse.biz/don" target="_blank">
+                <a class="btn btn-social btn-google-plus"
+                    href="https://plus.google.com/share?url=http://lembobineuse.biz/don" target="_blank">
                     Google +
                 </a>
             </p>
             <p>
                 <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
                 {% trans %}campaign.impots.infos{% endtrans %}
-                <a href="http://vosdroits.service-public.fr/particuliers/F426.xhtml" target="_blank">
+                <a href="{{ 'campaign.impots.link.url'|trans }}" target="_blank">
                     {% trans %}campaign.impots.link.title{% endtrans %}
                 </a>
             </p>
@@ -46,10 +50,12 @@
             {% trans %}sitemap.title{% endtrans %}
             <ul>
                 <li>
-                    <a href="{{ page('donum-apello') }}">Dōnum Apello</a>
+                    <a href="{{ page('donum-apello') }}">
+                        {% trans %}menu.appel_don{% endtrans %}
+                    </a>
                 </li>
                 <li>
-                    Història Bobinüs
+                    {% trans %}menu.historique{% endtrans %}
                     <ul>
                         <li>
                             <a href="{{ page('historia/01-bateau-cool') }}">
@@ -74,7 +80,7 @@
                     </ul>
                 </li>
                 <li>
-                    Decennium Bobinum
+                    {% trans %}menu.10ans{% endtrans %}
                     <ul>
                         <li>
                             <a href="{{ page('decennium/posters') }}">
