@@ -10,7 +10,7 @@ body {
 }
 
 html[lang=ja] > body {
-    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,'Hiragino Kaku Gothic Pro','Meiryo',sans-serif;
 }
 
 @media (max-width: 768px) {
